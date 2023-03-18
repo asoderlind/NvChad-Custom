@@ -2,8 +2,7 @@
 local M = {}
 
 M.ui = {
-  theme_toggle = { "catppuccin", "catppuccin_latte" },
-  theme = "onedark",
+  theme = "kanagawa",
 }
 
 M.plugins = "custom.plugins"
