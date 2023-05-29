@@ -14,12 +14,7 @@ local sources = {
 
   -- Meta formatter
   formatting.prettierd.with {
-    filetypes = { "html", "json", "markdown", "css", "yaml", "javascript", "typescript" },
-  },
-
-  -- diagnostics
-  lint.eslint.with {
-    command = "eslint_d",
+    filetypes = { "html", "json", "yaml", "javascript", "typescript", "typescriptreact" },
   },
 }
 
