@@ -4,17 +4,22 @@ local formatting = null_ls.builtins.formatting
 local lint = null_ls.builtins.diagnostics
 
 local sources = {
-  formatting.prettier,
   formatting.stylua,
+  formatting.clang_format,
 
   -- Python stuff
   formatting.isort,
-  formatting.black,
+  formatting.autopep8,
   lint.pylint,
 
   -- Meta formatter
   formatting.prettierd.with {
-    filetypes = { "html", "yaml", "javascript", "typescript" },
+    filetypes = { "html", "json", "markdown", "css", "yaml", "javascript", "typescript" },
+  },
+
+  -- diagnostics
+  lint.eslint.with {
+    command = "eslint_d",
   },
 }
 
