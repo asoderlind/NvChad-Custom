@@ -4,7 +4,6 @@ local overrides = require "custom.configs.overrides"
 local plugins = {
 
   -- Override plugin definition options
-
   {
     "neovim/nvim-lspconfig",
     dependencies = {
@@ -45,6 +44,18 @@ local plugins = {
     config = function()
       require("better_escape").setup()
     end,
+  },
+
+  {
+    "zbirenbaum/copilot.lua",
+    -- Lazy load when event occurs. Events are triggered
+    -- as mentioned in:
+    -- https://vi.stackexchange.com/a/4495/20389
+    event = "InsertEnter",
+    -- You can also have it load at immediately at
+    -- startup by commenting above and uncommenting below:
+    -- lazy = false
+    opts = overrides.copilot,
   },
 
   -- To make a plugin not be loaded
