@@ -1,5 +1,6 @@
 local M = {}
 
+-- Treesitter config
 M.treesitter = {
   ensure_installed = {
     "vim",
@@ -80,7 +81,7 @@ M.copilot = {
     auto_trigger = true,
     debounce = 75,
     keymap = {
-      accept = "<M-l>",
+      accept = "<TAB>",
       accept_word = false,
       accept_line = false,
       next = "<M-]>",
